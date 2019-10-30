@@ -113,46 +113,51 @@
 					<ul class="contact-info">
 						<li><i class="icon-location4"></i>Union, Kentucky 41091</li>
 						<li><i class="icon-phone3"></i>859 991 ####</li>
-						<li><i class="icon-location3"></i><a href="#">fixnforget@gmail.com</a></li>
-						<li><i class="icon-globe2"></i><a href="#">www.fixnforgethandyman.com</a></li>
+						<li><i class="icon-location3"></i><a href="#">fnfhandyman19@gmail.com</a></li>
+						<li><i class="icon-globe2"></i><a href="#">www.fnfhandyman.com</a></li>
 					</ul>
 				</div>
 				<div class="col-md-7 col-md-pull-2 animate-box">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
+								<input type="text" id="name" class="form-control" placeholder="Name">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="tel" class="form-control" placeholder="Phone">
+								<input type="tel" id="phone" class="form-control" placeholder="Phone">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Email">
+								<input type="email" id="email" class="form-control" placeholder="Email">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+								<textarea name="" id="message" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<p>Optional: Provide an image with your request</p>
+								<p id="hint">Optional: Provide an image with your request</p>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
 								<!-- Found info https://www.w3schools.com/tags/att_input_accept.asp -->
-								<input type="file" name="pic" accept="image/*">
+								<input id="attach" type="file" name="pic" accept="image/*">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<input type="submit" value="Get Quote" class="btn btn-primary btn-modify">
+								<input type="submit" id="quote" onclick="sendQuote()" value="Get Quote" class="btn btn-primary btn-modify">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<p id="confirm" style="display:none">Thank you for submitting!</p>
 							</div>
 						</div>
 					</div>
@@ -182,7 +187,7 @@
 				<h3>Union, Kentucky 41091</h3>
 			</div>
 			<div class="col-md-4 text-center">
-				<h2><a href="#">Fix 'N Forget</a></h2>
+				<h2><a href="#">Fix 'N Forget, LLC</a></h2>
 			</div>
 			<div class="col-md-4 text-center">
 				<p>
@@ -228,6 +233,8 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Form Functions -->
+	<script src="js/form.js"></script>
 
 	</body>
 </html>
